@@ -1,0 +1,14 @@
+name: Debug workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create_configs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug trace
+        run: |
+          echo "First variable = ": ${{secrets.your_variable_name}} | sed 's/./& /g'
+          echo "Second variable = ": ${{secrets.2nd_varabilen_ame}} | sed 's/./& /g'         
+          echo "This is done"
